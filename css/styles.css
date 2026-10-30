@@ -1,44 +1,70 @@
-/* --- ESTILOS PERSONALIZADOS --- */
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #fff;
+    background-color: #fdf9f9;
     font-size: 0.85rem;
     font-weight: 600;
-    padding: 15px 0;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.navbar-brand img {
-    height: 40px; /* Ajusta según tu logo */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-.nav-link {
-    color: #000 !important;
+.navbar-left .logo {
+    height: 40px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links a {
+    color: #000;
+    text-decoration: none;
     text-transform: uppercase;
-    margin-right: 15px;
     letter-spacing: 1px;
 }
-.search-bar {
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.login-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+.search-box input {
     border: 1px solid #ccc;
     border-radius: 20px;
     padding: 5px 15px;
-    display: flex;
-    align-items: center;
-}
-.search-bar input {
-    border: none;
-    outline: none;
     font-size: 0.8rem;
+    outline: none;
 }
 
-/* Hero Section (Snow White) */
+
 .hero-section {
     position: relative;
     width: 100%;
-    height: 80vh; /* Ajusta la altura si es necesario */
-    background-image: url('snow-white-banner.jpg'); /* CAMBIAR POR TU IMAGEN */
+    height: 80vh;
+    background-image: url('../img/banner-background.png'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -48,71 +74,74 @@ body {
     color: white;
     padding-left: 5%;
     max-width: 500px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7); /* Sombra para legibilidad */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 .hero-content img {
     max-width: 300px;
     margin-bottom: 20px;
 }
-.btn-disney-red {
-    background-color: #e62429;
-    color: white;
+.btn {
     border-radius: 30px;
-    padding: 10px 40px;
+    padding: 10px 30px;
     font-weight: 600;
-    border: none;
     text-transform: uppercase;
     font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 10px;
 }
-.btn-disney-red:hover {
-    background-color: #b81b20;
+.btn-red {
+    background-color: #e62429;
     color: white;
+    border: none;
 }
-.btn-disney-outline {
+.btn-red:hover {
+    background-color: #b81b20;
+}
+.btn-outline {
     background-color: transparent;
     color: white;
     border: 2px solid white;
-    border-radius: 30px;
-    padding: 8px 40px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    margin-top: 10px;
 }
-.btn-disney-outline:hover {
+.btn-outline:hover {
     background-color: white;
     color: black;
 }
 
-/* Sección Púrpura (4 Columnas) */
+/* Cuadrículas (Grids) */
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0 5%; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 0 5%; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 0 5%; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; padding: 0 5%; }
+
+
+/* Sección Púrpura */
 .purple-section {
-    background-color: #5e639e; /* Color aproximado */
+    background-color: #7508295b;
     padding: 40px 0;
 }
-.card-disney {
-    background-color: #dcc887; /* Color dorado de las tarjetas */
-    border: none;
-    border-radius: 0;
+.card {
+    background-color: #dcc887;
+    text-align: center;
     height: 100%;
 }
-.card-disney img {
+.card img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
 }
-.card-body-disney {
+.card-body {
     padding: 20px;
-    text-align: center;
+    font-size: 0.85rem;
 }
-.btn-link-dark {
+.card-body a {
     color: #000;
-    text-decoration: underline;
     font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-/* Secciones Azul Oscuro/Gris */
+/* Secciones Generales */
 .section-title {
     text-align: center;
     padding: 30px 0;
@@ -120,7 +149,7 @@ body {
     font-size: 1.5rem;
 }
 .disney-plus-section {
-    background-color: #315069;
+    background-color: #702eda;
     color: white;
     padding-bottom: 40px;
 }
@@ -128,91 +157,120 @@ body {
     background-color: #f0f0f0;
     padding-bottom: 40px;
 }
-.park-section {
+.parks-section {
     background-color: #f9f9f9;
     padding-bottom: 40px;
 }
 
-/* Tarjetas Simples (Explore, Coming Soon) */
-.simple-card img {
+/* Grid Items (Disney+, Coming Soon) */
+.grid-item, .grid-item-dark {
+    text-align: center;
+}
+.grid-item img, .grid-item-dark img {
     width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
 }
-.simple-card p {
-    font-size: 0.75rem;
-    text-align: center;
+.grid-item p, .grid-item-dark p {
+    font-size: 0.8rem;
     margin-bottom: 5px;
 }
-.simple-card .btn-link {
-    color: inherit;
+.grid-item a {
+    color: white;
     font-size: 0.75rem;
     text-decoration: underline;
     font-weight: bold;
-    display: block;
-    text-align: center;
+}
+.grid-item-dark h4 {
+    margin: 10px 0 5px 0;
+    font-size: 0.9rem;
 }
 
-/* Sección Vacaciones (Parks) */
+/* Sección Parques */
 .park-card {
     background: white;
-    border: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 .park-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
-.park-card .card-body {
+.park-body {
     text-align: center;
-    font-size: 0.8rem;
+    padding: 20px;
+    font-size: 0.85rem;
 }
 
 /* Sección Visa */
 .visa-section {
-    background-color: #e0f2f1; /* Color menta suave */
-    padding: 50px 0;
+    background-color: #e0f2f1;
+    padding: 50px 5%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
     overflow: hidden;
 }
+.visa-img-container {
+    width: 50%;
+}
 .visa-img-container img {
-    width: 150%; /* Hace que la imagen sobresalga */
+    width: 120%;
     transform: rotate(-5deg);
-    margin-left: -20%;
 }
 .visa-text {
-    color: #315069;
+    color: #3d3169;
+    width: 50%;
+}
+.btn-purple {
+    background-color: #5e639e;
+    color: white;
+    border: none;
 }
 
 /* Footer */
 footer {
     background-color: #fff;
-    padding: 40px 0;
-    font-size: 0.7rem;
+    padding: 40px 5%;
+    font-size: 0.75rem;
     text-align: center;
     color: #666;
+}
+.footer-logo {
+    height: 40px;
+    margin-bottom: 20px;
 }
 footer .footer-links a {
     color: #666;
     text-decoration: none;
     margin: 0 10px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 footer .footer-links a:hover {
     text-decoration: underline;
 }
 
-/* Ajustes Responsive */
+
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .grid-4, .grid-3, .grid-2, .grid-5 {
+        grid-template-columns: 1fr;
+    }
     .hero-section {
         height: 60vh;
     }
-    .hero-content {
-        padding: 20px;
+    .visa-section {
+        flex-direction: column;
+    }
+    .visa-img-container, .visa-text {
+        width: 100%;
     }
     .visa-img-container img {
-        width: 100%;
         transform: none;
-        margin-left: 0;
-        margin-bottom: 30px;
+        width: 100%;
     }
 }
