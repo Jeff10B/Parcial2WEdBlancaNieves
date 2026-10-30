@@ -2,11 +2,11 @@
 
 Este proyecto consiste en la maquetación web "pixel perfect" de una página principal de Disney (basada en el diseño de *Blanca Nieves*), desarrollado como parte del taller práctico para el segundo corte. El proyecto fue construido utilizando HTML5 y CSS3 puro, aplicando buenas prácticas de control de versiones y trabajo colaborativo (Pair Programming).
 
-## 👥 Integrantes
-* [Karen Muñoz]
-* [Jefersson Beltran]
+##  Integrantes
+* Karen Muñoz
+* Jefersson Beltran
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 * **HTML5** (Estructura semántica)
 * **CSS3** (Estilos, Flexbox, CSS Grid, Media Queries para responsive)
 * **Git & GitHub** (Control de versiones y trabajo en equipo)
@@ -14,7 +14,7 @@ Este proyecto consiste en la maquetación web "pixel perfect" de una página pri
 * **Live Server** (Entorno de desarrollo local)
 
 
-## 📚 Aprendizajes Obtenidos
+## Aprendizajes Obtenidos
 1. **Trabajo Colaborativo (Pair Programming):** Aprendimos a sincronizar nuestro trabajo en un mismo repositorio usando Git. Entendimos la importancia de hacer `git pull` antes de empezar a trabajar para evitar conflictos y cómo subir nuestros cambios con `git push`.
 2. **Dominio de CSS Grid y Flexbox:** Logramos estructurar secciones complejas (como las tarjetas de películas y las cuadrículas de 2, 3, 4 y 5 columnas) de manera responsiva y ordenada.
 3. **Manejo de Rutas Relativas:** Comprendimos cómo funciona la estructura de carpetas y cómo enlazar correctamente los archivos desde el HTML, especialmente cuando los estilos están en una carpeta (`css/`) y las imágenes en otra (`img/`).
